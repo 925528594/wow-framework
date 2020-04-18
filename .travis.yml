@@ -1,9 +1,5 @@
 language:       php
 php:
   - '7.2'
-before_install:
-  - composer self-update
-install:
-  - composer install --no-interaction --prefer-source
 script:
   - php -v
