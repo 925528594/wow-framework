@@ -1,5 +1,6 @@
 # php-package
 使用composer引入该库
+composer require 925528594/php-package
 
 
 
