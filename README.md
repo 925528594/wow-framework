@@ -1,4 +1,4 @@
-<p align="center"><img src="https://github.com/925528594/php-package/box.png" width="180"></p>
+<p align="center"><img src="https://github.com/925528594/php-package/raw/master/box.png" width="180"></p>
 
 <p align="center">
 <a href="https://travis-ci.org/github/925528594"><img src="https://travis-ci.org/925528594/php-package.svg" alt="Build Status"></a>
