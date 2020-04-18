@@ -4,7 +4,7 @@
 <a href="https://travis-ci.org/github/925528594"><img src="https://travis-ci.org/925528594/php-package.svg" alt="Build Status"></a>
 <a href="https://packagist.org/packages/925528594/php-package"><img src="https://img.shields.io/packagist/v/925528594/php-package" alt="Packagist Version"></a>
 <a href="https://github.com/925528594/php-package"><img src="https://img.shields.io/github/release-date/925528594/php-package" alt="GitHub Release Date"></a>
-<a href="https://github.com/925528594/php-package"><img alt="GitHub" src="https://img.shields.io/github/license/925528594/php-package"></a>
+<a href="https://github.com/925528594/php-package"><img src="https://img.shields.io/packagist/l/925528594/php-package" alt="Packagist"></a>
 </p>
 
 ## php-package
