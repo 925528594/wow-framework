@@ -1,4 +1,11 @@
 {
+    "name": "925528594/php-package",
+    "type": "project",
+    "description": "php依赖仓库",
+    "keywords": [
+        "php-package"
+    ],
+    "license": "MIT",
     "require": {
         "catfan/medoo": "^1.7"
     }
