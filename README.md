@@ -1,3 +1,4 @@
+[![Build Status](https://travis-ci.org/925528594/php-package.svg?branch=master)](https://travis-ci.org/925528594/php-package)
 # php-package
 使用composer引入该库
 ```
