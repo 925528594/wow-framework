@@ -3,8 +3,8 @@
     "type": "project",
     "description": "The Wow Framework of PHP.",
     "keywords": [
-        "wow",
-        "framework"
+        "framework",
+        "wow"
     ],
     "license": "MIT",
     "require": {
