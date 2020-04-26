@@ -1,12 +1,14 @@
 {
-    "name": "925528594/php-package",
+    "name": "925528594/wow-framework",
     "type": "project",
-    "description": "php依赖仓库",
+    "description": "The Wow Framework of PHP.",
     "keywords": [
-        "php-package"
+        "wow",
+        "framework"
     ],
     "license": "MIT",
     "require": {
+        "php": "^7.2",
         "catfan/medoo": "^1.7"
     }
 }
