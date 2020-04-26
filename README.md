@@ -7,5 +7,5 @@
 <a href="https://github.com/925528594/wow-framework"><img src="https://img.shields.io/github/license/925528594/wow-framework" alt="Packagist"></a>
 </p>
 
-## 关于 WOW Framework
-WOW框架库
+## 关于 Wow Framework
+Wow框架库
