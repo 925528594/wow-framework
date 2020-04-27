@@ -12,7 +12,7 @@ class Route {
     public static function init()
     {
         self::setUri();
-        mapRoute();
+        require_once env( 'BASE_PATH' ) . DIRECTORY_SEPARATOR . 'routes' . DIRECTORY_SEPARATOR . 'web.php';
         self::goRoute();
     }
 
@@ -118,8 +118,4 @@ class Route {
         exit;
     }
 
-}
-
-function mapRoute() {
-    require_once env( 'BASE_PATH' ) . DIRECTORY_SEPARATOR . 'routes' . DIRECTORY_SEPARATOR . 'web.php';
 }
