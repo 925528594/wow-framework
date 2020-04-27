@@ -115,7 +115,7 @@ class Route {
     private static function routeNotFound()
     {
         http_response_code(404);
-        exit;
+        exit('Resource not found.');
     }
 
 }
