@@ -27,13 +27,13 @@ class App
     private function setBasePath($basePath)
     {
         $this->basePath = $basePath;
-        env( 'BASE_PATH', $this->basePath );
+        put_env( 'BASE_PATH', $this->basePath );
     }
 
     private function setBaseConfigPath($basePath)
     {
         $this->baseConfigPath = $basePath . DIRECTORY_SEPARATOR . 'config';
-        env( 'BASE_CONFIG_PATH', $this->baseConfigPath );
+        put_env( 'BASE_CONFIG_PATH', $this->baseConfigPath );
     }
 
     private function loadConfigApp()

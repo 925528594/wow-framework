@@ -3,21 +3,28 @@
 use Negan\Support\Env;
 use Negan\Foundation\Config;
 
-if (! function_exists('env')) {
+if ( !function_exists('env') ) {
     function env($key, $default = null)
     {
         return Env::get($key, $default);
     }
 }
 
-if (! function_exists('config')) {
+if ( !function_exists('put_env') ) {
+    function put_env($key, $default = null)
+    {
+        return Env::put($key, $default);
+    }
+}
+
+if ( !function_exists('config') ) {
     function config($key)
     {
         return Config::get($key);
     }
 }
 
-if (! function_exists('response')) {
+if ( !function_exists('response') ) {
 
     function response($content = '')
     {
