@@ -7,7 +7,7 @@ use Negan\Support\Env;
 
 class App
 {
-    const VERSION = '1.0.2';
+    const VERSION = '1.0.0';
     protected $basePath;
     protected $baseConfigPath;
 
