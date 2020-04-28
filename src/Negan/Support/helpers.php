@@ -9,6 +9,13 @@ if (! function_exists('env')) {
     }
 }
 
+if (! function_exists('config')) {
+    function config($key)
+    {
+        return Env::config($key);
+    }
+}
+
 if (! function_exists('response')) {
 
     function response($content = '')

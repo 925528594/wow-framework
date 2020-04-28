@@ -13,8 +13,8 @@ class Config
 
     private static function do_debug()
     {
-        $debug = env('APP_DEBUG', false);
-        if ( $debug ){
+        $debug = config('app.debug');
+        if ( $debug ) {
             error_reporting(-1);
             ini_set('display_error','On');
         } else {
@@ -25,7 +25,7 @@ class Config
 
     private static function do_timezone()
     {
-        $timezone = env('APP_TIMEZONE', 'UTC');
+        $timezone = config('app.timezone');
         if ( !date_default_timezone_set($timezone) ) {
             date_default_timezone_set('UTC');
         }
