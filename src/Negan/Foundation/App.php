@@ -3,7 +3,6 @@
 namespace Negan\Foundation;
 
 use Negan\Routing\Route;
-use Negan\Support\Env;
 
 class App
 {
@@ -41,14 +40,14 @@ class App
     {
         $profile = $this->baseConfigPath . DIRECTORY_SEPARATOR . 'app.php';
         $this->checkFile( $profile );
-        Env::setConfig('app', require( $profile ) );
+        Config::set('app', require( $profile ) );
     }
 
     private function loadConfigDatabase()
     {
         $profile = $this->baseConfigPath . DIRECTORY_SEPARATOR . 'database.php';
         $this->checkFile( $profile );
-        Env::setConfig('database', require( $profile ) );
+        Config::set('database', require( $profile ) );
     }
 
     private function checkFile($file)

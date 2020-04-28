@@ -1,6 +1,7 @@
 <?php
 
 use Negan\Support\Env;
+use Negan\Foundation\Config;
 
 if (! function_exists('env')) {
     function env($key, $default = null)
@@ -12,7 +13,7 @@ if (! function_exists('env')) {
 if (! function_exists('config')) {
     function config($key)
     {
-        return Env::config($key);
+        return Config::get($key);
     }
 }
 

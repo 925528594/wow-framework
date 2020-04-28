@@ -4,6 +4,26 @@ namespace Negan\Foundation;
 
 class Config
 {
+    protected static $config = array();
+
+    public static function set($key, $default = null)
+    {
+        self::$config[$key] = $default;
+    }
+
+    public static function get($key)
+    {
+        $key = explode( '.', $key );
+        $value = self::$config;
+        while ( $key ) {
+            $k = array_shift( $key );
+            if ( !isset($value[$k]) ) {
+                return null;
+            }
+            $value = $value[$k];
+        }
+        return $value;
+    }
 
     public static function init()
     {
