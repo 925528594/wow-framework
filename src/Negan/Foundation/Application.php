@@ -4,7 +4,7 @@ namespace Negan\Foundation;
 
 use Negan\Routing\Route;
 
-class App
+class Application
 {
     const VERSION = '1.0.0';
     protected $basePath;
