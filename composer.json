@@ -12,6 +12,7 @@
     },
     "autoload": {
         "files": [
+            "src/Negan/Foundation/helpers.php",
             "src/Negan/Support/helpers.php"
         ],
         "psr-4": {

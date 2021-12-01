@@ -2,7 +2,7 @@
 
 namespace Negan\Database;
 
-class Model
+abstract class Model
 {
     public static $_instance;
     public static $_local_instance;

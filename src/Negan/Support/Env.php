@@ -32,15 +32,4 @@ class Env
         return $value;
     }
 
-    public static function put($key, $value = null)
-    {
-        if ( is_string($key && is_string($value)) ) {
-            $setting = $key . '=' . $value;
-            if ( putenv($setting) ) {
-                return $value;
-            }
-        }
-        return false;
-    }
-
 }
