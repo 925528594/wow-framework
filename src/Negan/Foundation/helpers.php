@@ -154,3 +154,25 @@ if (! function_exists('view')) {
         return $factory->make($view, $data, $mergeData);
     }
 }
+
+
+if (! function_exists('redirect')) {
+    /**
+     * 创建并返回一个重定向器或重定向实例
+     *
+     * @param string|null $to
+     * @param int $status
+     * @param array $headers
+     * @param bool|null $secure
+     * @return \Negan\Routing\Redirector|\Negan\Http\RedirectResponse
+     */
+    function redirect($to = null, $status = 302, $headers = [], $secure = null)
+    {
+        if (is_null($to)) {
+            return app('redirect');
+        }
+
+        return app('redirect')->to($to, $status, $headers, $secure);
+    }
+}
+

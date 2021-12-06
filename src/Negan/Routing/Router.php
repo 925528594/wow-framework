@@ -4,8 +4,11 @@ namespace Negan\Routing;
 
 use Negan\Container\Container;
 use Closure;
+use ArrayObject;
+use JsonSerializable;
 use Negan\Http\Request;
 use Negan\Http\Response;
+use Negan\Http\JsonResponse;
 use Negan\Support\Traits\Macroable;
 
 class Router {
@@ -279,7 +282,11 @@ class Router {
 
     public static function toResponse($request, $response)
     {
-        if ( !$response instanceof Response ) {
+        if ( !$response instanceof Response &&
+              $response instanceof ArrayObject ||
+              $response instanceof JsonSerializable) {
+            $response = new JsonResponse($response);
+        } elseif ( !$response instanceof Response ) {
             $response = new Response($response, 200, ['Content-Type' => 'text/html']);
         }
 

@@ -5,22 +5,32 @@ namespace Negan\Routing;
 use Negan\Http\JsonResponse;
 use Negan\Http\Response;
 use Negan\View\Factory;
-use Negan\Support\Str;
 use Negan\Support\Traits\Macroable;
 
 class ResponseFactory
 {
     use Macroable;
 
+    /**
+     * @var \Negan\View\Factory
+     */
     protected $view;
 
     /**
+     * @var \Negan\Routing\Redirector
+     */
+    protected $redirector;
+
+
+    /**
      * @param \Negan\View\Factory $view
+     * @param \Negan\Routing\Redirector $redirector
      * @return void
      */
-    public function __construct(Factory $view)
+    public function __construct(Factory $view, Redirector $redirector)
     {
         $this->view = $view;
+        $this->redirector = $redirector;
     }
 
     /**
@@ -66,5 +76,17 @@ class ResponseFactory
     public function json($data = [], $status = 200, array $headers = [], $options = 0)
     {
         return new JsonResponse($data, $status, $headers, $options);
+    }
+
+    /**
+     * @param string $path
+     * @param int $status
+     * @param array $headers
+     * @param bool|null $secure
+     * @return \Negan\Http\RedirectResponse
+     */
+    public function redirectTo($path, $status = 302, $headers = [], $secure = null)
+    {
+        return $this->redirector->to($path, $status, $headers, $secure);
     }
 }

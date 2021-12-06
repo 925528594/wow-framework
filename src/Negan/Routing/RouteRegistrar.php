@@ -8,6 +8,18 @@ use Negan\Support\Reflector;
 use BadMethodCallException;
 use InvalidArgumentException;
 
+/**
+ * @method \Negan\Routing\Route get(string $uri, \Closure|array|string|null $action = null)
+ * @method \Negan\Routing\Route post(string $uri, \Closure|array|string|null $action = null)
+ * @method \Negan\Routing\Route put(string $uri, \Closure|array|string|null $action = null)
+ * @method \Negan\Routing\Route delete(string $uri, \Closure|array|string|null $action = null)
+ * @method \Negan\Routing\Route patch(string $uri, \Closure|array|string|null $action = null)
+ * @method \Negan\Routing\Route options(string $uri, \Closure|array|string|null $action = null)
+ * @method \Negan\Routing\Route any(string $uri, \Closure|array|string|null $action = null)
+ * @method \Negan\Routing\RouteRegistrar middleware(array|string|null $middleware)
+ * @method \Negan\Routing\RouteRegistrar namespace(string $value)
+ * @method \Negan\Routing\RouteRegistrar prefix(string  $prefix)
+ */
 class RouteRegistrar
 {
     protected $router;

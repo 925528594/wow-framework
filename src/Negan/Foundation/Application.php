@@ -70,6 +70,7 @@ class Application extends Container
                      'app'  => [self::class],
                      'config' => [\Negan\Config\Repository::class],
                      'request' => [\Negan\Http\Request::class],
+                     'redirect' => [\Negan\Routing\Redirector::class],
                      'router' => [\Negan\Routing\Router::class],
                      'view' => [\Negan\View\Factory::class],
                  ] as $abstract => $aliases) {
