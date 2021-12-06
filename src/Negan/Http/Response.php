@@ -265,6 +265,13 @@ class Response
         return $this;
     }
 
+    public function cookie($key, $values)
+    {
+        $this->headers->setCookie($key, $values);
+
+        return $this;
+    }
+
     public function withException(Throwable $e)
     {
         $this->exception = $e;
@@ -282,6 +289,11 @@ class Response
         }
 
         return $this;
+    }
+
+    public function isRedirect(string $location = null)
+    {
+        return \in_array($this->statusCode, [201, 301, 302, 303, 307, 308]) && (null === $location ?: $location == $this->headers->get('Location'));
     }
 
     public function send()
