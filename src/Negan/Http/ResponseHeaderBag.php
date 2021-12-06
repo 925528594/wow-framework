@@ -69,7 +69,7 @@ class ResponseHeaderBag
         unset($this->headers[$key]);
     }
 
-    public function setCookie($key, $values, $replace = true)
+    public function setCookie($key, $values)
     {
         $this->cookies[$key] = $values;
     }
@@ -91,7 +91,7 @@ class ResponseHeaderBag
 
         $flattenedCookies = [];
         foreach ($this->cookies as $key => $value) {
-            $flattenedCookies[] = $key.'='.$value;
+            $flattenedCookies[] = $key.'='.$value.'; path=/; samesite=lax';
         }
 
         return $flattenedCookies;

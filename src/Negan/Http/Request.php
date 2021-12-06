@@ -33,15 +33,7 @@ class Request
 
     protected function loadGet()
     {
-        $queryUrl = $_SERVER['HTTP_HOST'] . $_SERVER['REQUEST_URI'];;
-        $queryParam  = parse_url($queryUrl, PHP_URL_QUERY);
-        $queryParam  = html_entity_decode($queryParam);
-        $queryParam  = explode('&', $queryParam);
-        foreach($queryParam as $value)
-        {
-            $i = explode('=', $value);
-            $this->query[$i[0]] = isset($i[1]) ? $i[1] : '';
-        }
+        $this->query = $_GET;
     }
 
     protected function loadPostContent()
@@ -187,6 +179,15 @@ class Request
         }
 
         return $this->requestUri;
+    }
+
+    public function getRequestUrl()
+    {
+        if (null === $this->requestUrl) {
+            $this->requestUri = '';
+        }
+
+        return $this->requestUrl;
     }
 
     public function removeXss($val)
